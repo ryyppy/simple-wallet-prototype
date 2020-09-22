@@ -1,0 +1,12 @@
+@tailwind base;
+
+@tailwind components;
+
+/* Not entirely sure how to make webpack recognize the font files here */
+/*@import "./_fonts.css";*/
+
+body {
+  @apply font-sans bg-white;
+}
+@tailwind utilities;
+
