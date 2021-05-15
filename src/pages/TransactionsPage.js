@@ -2,11 +2,11 @@
 'use strict';
 
 var Icon = require("../common/Icon.js");
-var Curry = require("bs-platform/lib/js/curry.js");
+var Curry = require("rescript/lib/js/curry.js");
 var React = require("react");
 var TezStats = require("../common/TezStats.js");
 var TzAddress = require("../components/TzAddress.js");
-var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
+var Belt_Array = require("rescript/lib/js/belt_Array.js");
 var MainLayout = require("../layouts/MainLayout.js");
 
 function styledAmount(gotPaid, volume) {
@@ -152,10 +152,10 @@ function TransactionsPage(Props) {
   content = typeof state === "number" ? (
       state === /* Init */0 ? React.createElement(TransactionsPage$Placeholder, {}) : React.createElement(TransactionsPage$Placeholder, {})
     ) : (
-      state.TAG ? "Could not load data: " + state._0 : React.createElement(TransactionsPage$TransactionHistory, {
+      state.TAG === /* Success */0 ? React.createElement(TransactionsPage$TransactionHistory, {
               wallet: wallet,
               data: state._0
-            })
+            }) : "Could not load data: " + state._0
     );
   return React.createElement(MainLayout.make, {
               children: React.createElement("div", {

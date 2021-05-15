@@ -2,7 +2,7 @@
 'use strict';
 
 var React = require("react");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function Button(Props) {
   var onClick = Props.onClick;

@@ -10,8 +10,8 @@
 // - Sometimes it's worth simplifying the markup a bit afterwards
 
 module Clipboard = {
-  [@react.component]
-  let make = (~className: string="") => {
+  @react.component
+  let make = (~className: string="") =>
     <svg
       width="24"
       height="24"
@@ -21,17 +21,14 @@ module Clipboard = {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={"stroke-current " ++ className}>
-      <path
-        d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"
-      />
+      <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2" />
       <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module ArrowUp = {
-  [@react.component]
-  let make = (~className: string="") => {
+  @react.component
+  let make = (~className: string="") =>
     <svg
       width="24"
       height="24"
@@ -42,13 +39,12 @@ module ArrowUp = {
       strokeLinejoin="round"
       className={"stroke-current " ++ className}>
       <path d="M12 19V5M5 12l7-7 7 7" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module ArrowDown = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       width="24"
       height="24"
@@ -59,13 +55,12 @@ module ArrowDown = {
       strokeLinejoin="round"
       className={"stroke-current " ++ className}>
       <path d="M12 5v14M19 12l-7 7-7-7" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module UpCircle = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       width="24"
       height="24"
@@ -75,15 +70,13 @@ module UpCircle = {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={"stroke-current " ++ className}>
-      <circle cx="12" cy="12" r="10" />
-      <path d="M16 12l-4-4-4 4M12 16V8" />
-    </svg>;
-  };
-};
+      <circle cx="12" cy="12" r="10" /> <path d="M16 12l-4-4-4 4M12 16V8" />
+    </svg>
+}
 
 module UpDownArrow = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg width="18" height="10" viewBox="0 0 18 10" fill="none">
       <path
         d="M4.203 8.595V1.688M.75 5.141l3.453-3.453 3.454 3.453M13.796 1.688v6.907M17.25 5.141l-3.454 3.454-3.453-3.454"
@@ -92,13 +85,12 @@ module UpDownArrow = {
         strokeLinejoin="round"
         className={"stroke-current " ++ className}
       />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module Plus = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       width="24"
       height="24"
@@ -109,13 +101,12 @@ module Plus = {
       strokeLinejoin="round"
       className={"stroke-current" ++ className}>
       <path d="M12 5v14M5 12h14" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module Copy = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       width="24"
       height="24"
@@ -127,13 +118,12 @@ module Copy = {
       className={"stroke-current " ++ className}>
       <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
       <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module Burger = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       width="24"
       height="24"
@@ -144,13 +134,12 @@ module Burger = {
       strokeLinejoin="round"
       className={"stroke-current " ++ className}>
       <path d="M3 12h18M3 6h18M3 18h18" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module VerticalDots = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       width="24"
       height="24"
@@ -164,13 +153,12 @@ module VerticalDots = {
       <circle cx="12" cy="12" r="1" />
       <circle cx="12" cy="5" r="1" />
       <circle cx="12" cy="19" r="1" />
-    </svg>;
-  };
-};
+    </svg>
+}
 
 module Wallet = {
-  [@react.component]
-  let make = (~className="") => {
+  @react.component
+  let make = (~className="") =>
     <svg
       height="512"
       className={"fill-current " ++ className}
@@ -182,6 +170,5 @@ module Wallet = {
       <path
         d="M416.004 376.007c-17.645 0-32-14.355-32-32s14.355-32 32-32 32 14.355 32 32-14.356 32-32 32zm0-32l.001.021z"
       />
-    </svg>;
-  };
-};
+    </svg>
+}

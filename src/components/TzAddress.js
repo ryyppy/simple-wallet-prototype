@@ -3,7 +3,7 @@
 
 var Icon = require("../common/Icon.js");
 var React = require("react");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function shorten(address) {
   var length = address.length;

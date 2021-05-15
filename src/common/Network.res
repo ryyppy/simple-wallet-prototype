@@ -1,9 +1,9 @@
 type t =
   | Mainnet
-  | Testnet;
+  | Testnet
 
 let toString = t =>
-  switch (t) {
+  switch t {
   | Mainnet => "mainnet"
   | Testnet => "testnet"
-  };
+  }
