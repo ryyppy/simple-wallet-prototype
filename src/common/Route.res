@@ -3,7 +3,7 @@ type route =
   | Transactions
   | Page404
 
-let fromUrl = (url: ReasonReactRouter.url) =>
+let fromUrl = (url: RescriptReactRouter.url) =>
   switch url.hash {
   | "dashboard" => Dashboard
   | "transactions" => Transactions

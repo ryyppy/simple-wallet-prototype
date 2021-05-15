@@ -23,7 +23,7 @@ module MyAccounts = {
 module MyPages = {
   @react.component
   let make = () => {
-    let url = ReasonReactRouter.useUrl()
+    let url = RescriptReactRouter.useUrl()
     let route = Route.fromUrl(url)
 
     let pages = [("Dashboard", Route.Dashboard), ("Transactions", Route.Transactions)]

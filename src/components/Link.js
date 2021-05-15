@@ -2,8 +2,8 @@
 'use strict';
 
 var React = require("react");
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
-var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
+var RescriptReactRouter = require("@rescript/react/src/RescriptReactRouter.js");
 
 function Link(Props) {
   var className = Props.className;
@@ -11,7 +11,7 @@ function Link(Props) {
   var children = Props.children;
   var onClick = function (evt) {
     evt.preventDefault();
-    return ReasonReactRouter.push(href);
+    return RescriptReactRouter.push(href);
   };
   var tmp = {
     href: href,

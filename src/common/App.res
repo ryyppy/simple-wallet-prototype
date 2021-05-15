@@ -35,14 +35,14 @@ let mockupState = {
 
 @react.component
 let make = () => {
-  let url = ReasonReactRouter.useUrl()
+  let url = RescriptReactRouter.useUrl()
   let route = Route.fromUrl(url)
 
   let (state, setState) = React.useState(_ => mockupState)
 
   React.useEffect0(() => {
-    let watchId = ReasonReactRouter.watchUrl(url => Js.log2("Route switched to", url))
-    let cleanup = () => ReasonReactRouter.unwatchUrl(watchId)
+    let watchId = RescriptReactRouter.watchUrl(url => Js.log2("Route switched to", url))
+    let cleanup = () => RescriptReactRouter.unwatchUrl(watchId)
     Some(cleanup)
   })
 

@@ -3,13 +3,13 @@
 
 var Icon = require("../common/Icon.js");
 var Link = require("./Link.js");
-var Curry = require("bs-platform/lib/js/curry.js");
+var Curry = require("rescript/lib/js/curry.js");
 var Route = require("../common/Route.js");
 var React = require("react");
 var Network = require("../common/Network.js");
-var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
-var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
-var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.js");
+var Belt_Array = require("rescript/lib/js/belt_Array.js");
+var Belt_Option = require("rescript/lib/js/belt_Option.js");
+var RescriptReactRouter = require("@rescript/react/src/RescriptReactRouter.js");
 
 function Sidebar$MyAccounts(Props) {
   var wallets = Props.wallets;
@@ -42,7 +42,7 @@ var MyAccounts = {
 };
 
 function Sidebar$MyPages(Props) {
-  var url = ReasonReactRouter.useUrl(undefined, undefined);
+  var url = RescriptReactRouter.useUrl(undefined, undefined);
   var route = Route.fromUrl(url);
   var pages = [
     [
@@ -80,11 +80,11 @@ var MyPages = {
 function Sidebar$ConnectedBox(Props) {
   var status = Props.status;
   var match;
-  match = status.TAG ? [
-      "bg-red",
+  match = status.TAG === /* Connected */0 ? [
+      "bg-green",
       Network.toString(status._0)
     ] : [
-      "bg-green",
+      "bg-red",
       Network.toString(status._0)
     ];
   return React.createElement("div", {
